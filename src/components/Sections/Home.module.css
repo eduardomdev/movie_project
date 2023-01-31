@@ -1,0 +1,144 @@
+#HomeSection{
+    background-color: #2b2b2b;
+    color: white;
+    min-height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#HomeSearchFilm{
+    background-image: url('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces//yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg');
+    width: 100%;
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+#blurImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #2b2b2bc4;
+}
+
+
+#HomeText{
+    padding: 20px 60px;
+    width: 100%;
+}
+
+#HomeText h1{
+    font-size: 60px;
+}   
+
+#HomeText h2{
+    letter-spacing: 2px;
+}  
+
+#scrollFilms{
+    border-radius: 20px;
+    padding: 30px 0px;
+    scroll-behavior: smooth;
+    width: 95%;
+    display: flex;
+    overflow-y: hidden;
+}
+
+#HomeCarouselFilm{
+    border-top: 1px solid #f8f8f834;
+    background: rgb(84,84,84);
+    background: linear-gradient(0deg, rgba(84,84,84,1) 0%, rgba(43,43,43,1) 100%);
+    overflow-y: hidden;
+}
+
+#sectionButtonToday{
+    display: flex;
+    margin-left: 60px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+#sectionButtonToday button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 100px;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    background-color: #1f1f1f;
+}
+
+#sectionButtonToday button:hover{
+    background-color: #383838;
+    transition: 0.3s;
+}
+
+#sectionShowFilms{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerTop{
+    border-radius: 10px;
+    display: flex;
+    margin: 0px 10px;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+}
+
+#scrollFilms::-webkit-scrollbar{
+    display: none;
+}
+
+.containerTop img{
+    border-radius: 10px;
+    cursor: pointer;
+    height: 100%;
+}
+
+.containerTop img:hover{
+    height: 105%;
+    transition: 0.4s;
+}
+
+
+.arrowClick{
+    background-color: transparent;
+    border: none;
+    color: #f8f8f8;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px){
+
+    #sectionButtonToday{
+        margin-left: 30px;
+    }
+
+    .arrowClick{
+        font-size: 30px;
+
+    }
+
+    #HomeText{
+        padding: 20px 30px;
+    }
+}

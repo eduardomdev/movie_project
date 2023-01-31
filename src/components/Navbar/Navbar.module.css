@@ -1,0 +1,212 @@
+#NavBarContainer{
+    padding: 0px 10px 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #f8f8f834;
+}
+
+#NavBarList{
+    display: flex;
+    list-style: none;
+    margin-right: 1vw;
+}
+
+#NavBarList li{
+    padding: 10px;
+}
+
+#NavBarList a{
+    text-decoration: none;
+    color: #f8f8f8;
+}
+
+#IconNavbar img{
+    margin-left: 2vw;
+    width: 80px;
+    height: 80px;
+}
+
+#InputNavBar{
+    display: flex;
+}
+
+#InputNavBar form{
+    margin-right: 13px;
+    border-radius: 30px;
+    width: 45px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+#InputNavBar form input{
+    text-align: center;
+    outline: none;
+    height: 45px;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 30px;
+    border: none;
+    border-color: white;
+    color: rgba(255, 255, 255, 0.842);
+    font-size: 20px;
+    background-color: #2e2e2e;
+}
+
+#InputNavBar form input::placeholder{
+    font-size: 15px;
+}
+
+#InputNavBar form button{
+    border: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.61);
+    font-size: 20px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #2e2e2e;
+}
+
+#InputNavBar form button:hover{
+    background-color: #5e5e5e;
+}
+
+#InputNavBar form:focus-within{
+    transition: 0.3s;
+    width: 340px;
+}
+
+/*DROPDOWN MENU \/*/
+
+.dropdownButton{
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    font-size: 30px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#dropDownActive{
+    display: none;
+}
+
+#dropDownDesactive{
+    display: none;
+    position: absolute;
+    top: 85px;
+    background-color: rgb(83, 83, 83);
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    background-color: #3f3f3f;
+    animation: dropDownDesactive 0.3s;
+}
+
+@keyframes dropDownDesactive {
+    0% {
+      height: 0%;
+      opacity: 0;
+    }
+    100% {
+      height: 250px;
+      opacity: 1;
+    }
+  }
+
+#dropDownDesactive form{
+    margin-right: 13px;
+    border-radius: 30px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+#dropDownDesactive form input{
+    padding-left: 20px;
+    text-align: left;
+    outline: none;
+    height: 45px;
+    width: 90%;
+    font-size: 15px;
+    border: none;
+    color: rgba(255, 255, 255, 0.842);
+    font-size: 20px;
+    background-color: #3f3f3f;
+}
+
+#dropDownDesactive form input::placeholder{
+    font-size: 15px;
+}
+
+#dropDownDesactive form button{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.61);
+    font-size: 20px;
+    height: 45px;
+    background-color: #3f3f3f;
+}
+
+#dropListDesactive{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    margin-right: 1vw;
+}
+
+#dropListDesactive li{
+    border-top: 1px solid #f8f8f809;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+#dropListDesactive a{
+    text-decoration: none;
+    color: #f8f8f8;
+}
+
+@media only screen and (max-width: 930px){
+
+    #NavBarContainer{
+        padding: 0px;
+    }
+    
+
+    .dropdownButton{
+        display: block;
+    }
+
+    #dropDownDesactive{
+        display: flex;
+    }
+
+    #InputNavBar{
+        display: none;
+    }
+}

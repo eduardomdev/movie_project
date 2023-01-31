@@ -1,0 +1,25 @@
+#FooterContainer{
+    background-color: #1f1f1f;
+    color: #f8f8f8;
+    border-top: 1px solid #f8f8f834;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#FooterContainer ul{
+    display: flex;
+    list-style: none;
+}
+
+#FooterContainer li{
+    padding: 5px;
+    font-size: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: #f8f8f8;
+}
