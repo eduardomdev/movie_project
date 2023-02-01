@@ -10,10 +10,10 @@ function Footer(){
                     <a href="https://www.instagram.com/eduardo.macieln/"><FaInstagram></FaInstagram></a>
                 </li>
                 <li>
-                    <a href="https://github.com/eduardomdev"><FaLinkedinIn></FaLinkedinIn></a>
+                    <a href="https://www.linkedin.com/in/eduardo-maciel-463572264/"><FaLinkedinIn></FaLinkedinIn></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/eduardo-maciel-463572264/"><FaGithub></FaGithub></a>
+                    <a href="https://github.com/eduardomdev"><FaGithub></FaGithub></a>
                 </li>
             </ul>
             <p>
