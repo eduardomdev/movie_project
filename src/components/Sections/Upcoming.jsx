@@ -41,6 +41,11 @@ function Upcoming(){
   }
 
     return(
+        upcoming.length === 0 ? 
+        <main id={styles.Upcoming}>
+          <div className={styles.ldsDualRing}></div> 
+        </main>
+      :
         <main id={styles.Upcoming}>
             {upcoming.map((item, index) => ( 
                 <div className={styles.containerUpcoming} key={index}>

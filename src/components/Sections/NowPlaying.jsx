@@ -50,6 +50,11 @@ function NowPlaying(){
   }
 
     return(
+        nowPlaying.length === 0 ? 
+        <main id={styles.NowPlaying}>
+          <div className={styles.ldsDualRing}></div> 
+        </main>
+        :
         <main id={styles.NowPlaying}>
             {nowPlaying.map((item, index) => ( 
               <div className={styles.containerNow} key={index}> 

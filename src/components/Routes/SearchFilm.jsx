@@ -36,11 +36,12 @@ function Search() {
         navigate(`/description?q=${item.title}`) 
       }
 
+
     return (
         <main id={styles.searchContainer} >
             <h2>Exibindo resultados de: {query}</h2>
                 <div id={styles.showMovies} >
-                    {nameMovie.length === 0 && <p>Carregando...</p>}
+                    {nameMovie.length === 0 && <div className={styles.ldsDualRing}></div>}
                     {nameMovie.length > 0 && 
                     nameMovie.map((item, index) => ( 
                     <div className={styles.containerTop} key={index}>

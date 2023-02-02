@@ -45,6 +45,10 @@ function TopRated(){
     }
 
     return(
+        topRate.length === 0 ? 
+        <main id={styles.TopRated}>
+          <div className={styles.ldsDualRing}></div> 
+        </main>:
         <main id={styles.TopRated}>
             {topRate.map((item, index) => ( 
             <div className={styles.containerTop} key={index}>

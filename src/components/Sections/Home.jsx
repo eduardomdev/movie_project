@@ -57,33 +57,38 @@ function Home(){
       }
 
     return(
-        <main id={styles.HomeSection}>
-            <section id={styles.HomeSearchFilm}>
-                <div id={styles.blurImage}>
-                    <div id={styles.HomeText}>
-                        <h1>Welcome.</h1>
-                        <h2>Millions of movies to discover. Explore now.</h2>
-                    </div>
-                </div>
+        today.length === 0 ? 
+            <section id={styles.HomeSection}>
+                        <div className={styles.ldsDualRing}></div> 
             </section>
-            <section id={styles.HomeCarouselFilm}>
-                <div id={styles.sectionButtonToday}>
-                    <p>Trending</p>
-                    <button onClick={() => setChangeDayWeek('day')}>Today</button>
-                    <button onClick={() => setChangeDayWeek('week')} >Week</button>
-                </div>
-                <div id={styles.sectionShowFilms}>
-                    <button className={styles.arrowClick} onClick={clickLeft}><FaAngleLeft></FaAngleLeft></button>
-                        <div id={styles.scrollFilms} ref={carousel} >
-                            {today.map((item, index) => ( 
-                            <div className={styles.containerTop} key={index}>
-                                <img onClick={() => roadInfo(item)} loading='lazy' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${item.poster_path}`} alt={item.title} />
-                            </div> ))}
+            :
+            <main id={styles.HomeSection}>
+                <section id={styles.HomeSearchFilm}>
+                    <div id={styles.blurImage}>
+                        <div id={styles.HomeText}>
+                            <h1>Welcome.</h1>
+                            <h2>Millions of movies to discover. Explore now.</h2>
                         </div>
-                    <button className={styles.arrowClick}  onClick={clickRight}><FaAngleRight></FaAngleRight></button>
-                </div>
-            </section>
-        </main>
+                    </div>
+                </section>
+                <section id={styles.HomeCarouselFilm}>
+                    <div id={styles.sectionButtonToday}>
+                        <p>Trending</p>
+                        <button onClick={() => setChangeDayWeek('day')}>Today</button>
+                        <button onClick={() => setChangeDayWeek('week')} >Week</button>
+                    </div>
+                    <div id={styles.sectionShowFilms}>
+                        <button className={styles.arrowClick} onClick={clickLeft}><FaAngleLeft></FaAngleLeft></button>
+                            <div id={styles.scrollFilms} ref={carousel} >
+                                {today.map((item, index) => ( 
+                                <div className={styles.containerTop} key={index}>
+                                    <img onClick={() => roadInfo(item)} loading='lazy' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${item.poster_path}`} alt={item.title} />
+                                </div> ))}
+                            </div>
+                        <button className={styles.arrowClick}  onClick={clickRight}><FaAngleRight></FaAngleRight></button>
+                    </div>
+                </section>
+            </main>
     )
 }
 
