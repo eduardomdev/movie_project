@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import styles from './Upcoming.module.css'
 import { useNavigate } from "react-router-dom"
+import Pages from "./Pages"
 
 function Upcoming(){
 
@@ -8,23 +9,27 @@ function Upcoming(){
 //(FETCH/ASYNC/AWAIT E UseEffect utilizados) RETORNANDO AS INFORMAÇÕES DE CADA ITEM CONTIDO NELE.
 
     const [upcoming, setUpcoming] = useState([])
-
+    const [atualPage, setAtualPage] = useState(1);
+    const [page, setPage] = useState([]);
+    
     async function handleApi(){
-    const response = await fetch(`https://api.themoviedb.org/3/movie/${'upcoming'}?api_key=8cf957a02ed2c5b3a299ac17c62f1b88`)
+    const response = await fetch(`https://api.themoviedb.org/3/movie/${'upcoming'}?api_key=8cf957a02ed2c5b3a299ac17c62f1b88&page=${atualPage}`)
     const responseJson = await response.json()
-    const setJson = await setUpcoming(responseJson.results)
-    return setJson
+
+    const arrayPage = []
+    for(let i = 0; i <= responseJson.total_pages; i++){
+        arrayPage.push(i + 1)
+    }
+
+    setUpcoming(responseJson.results)
+    setPage(arrayPage)
    }
 
-   useEffect(() => {
+    useEffect(() => {
 
-    handleApi()
-  }, [])
+      handleApi()   
 
-// Hook NAVIGATE PARA IR PARA ROTA ESPECIFICADA / roadInfo = DEFINE UM LOCALSTORAGE PARA CADA FILME PERCORRIDO NO MAP
-// ABAIXO, PASSANDO TODAS AS INFORMAÇÕES DE CADA ITEM DO ARRAY E DIRECIONA PARA A PAGE DE DESCRIÇÃO COM AS INFOS DOS
-// FILMES
-
+    }, [atualPage])
 
   const navigate = useNavigate();
 
@@ -41,6 +46,7 @@ function Upcoming(){
                 <div className={styles.containerUpcoming} key={index}>
                         <img onClick={() => roadInfo(item)} loading='lazy' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${item.poster_path}`} alt={item.title} />
                 </div> ))}
+                <Pages setAtualPage={setAtualPage} page={page} ></Pages>
         </main>
     )
 }

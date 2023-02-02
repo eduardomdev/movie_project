@@ -1,0 +1,61 @@
+#pagination{
+    display: flex;
+}
+
+#pagination li{
+    color: rgb(238, 238, 238);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 1px solid rgb(184, 184, 184);
+}
+
+#pagination li:hover{
+    background-color:  #505050;;
+}
+
+#paginationSpace{
+    align-items: center;
+    display: flex;
+    width: 360px;
+    height: 30px;
+    overflow: hidden;
+}
+
+#containerPages{
+    margin: 30px;
+    align-items: center;
+    display: flex;
+}
+
+#containerPages button {
+    cursor: pointer;
+    margin: 5px;
+    background-color: transparent;
+    border-radius: 3px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.479);
+}
+
+@media only screen and (max-width: 600px){
+    #paginationSpace{
+        align-items: center;
+        display: flex;
+        width: 200px;
+        height: 30px;
+        overflow: hidden;
+    }
+}
