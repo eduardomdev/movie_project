@@ -27,6 +27,7 @@ function Upcoming(){
 
     useEffect(() => {
 
+      setUpcoming([])
       handleApi()   
 
     }, [atualPage])

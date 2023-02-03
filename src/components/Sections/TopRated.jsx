@@ -29,6 +29,7 @@ function TopRated(){
 
     useEffect(() => {
 
+      setTopRate([])
       handleApi()   
 
     }, [atualPage])

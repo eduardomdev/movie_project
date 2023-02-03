@@ -30,6 +30,7 @@ function NowPlaying(){
 
     useEffect(() => {
 
+      setNowPlaying([])
       handleApi()   
 
     }, [atualPage])

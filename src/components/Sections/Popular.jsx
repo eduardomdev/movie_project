@@ -27,6 +27,7 @@ function Popular(){
 
     useEffect(() => {
 
+      setPopular([])
       handleApi()   
 
     }, [atualPage])
