@@ -50,13 +50,14 @@ function Popular(){
         popular.length === 0 ? 
         <main id={styles.Popular}>
           <div className={styles.ldsDualRing}></div> 
-        </main>:
+        </main> :
         <main id={styles.Popular}>
-            {page.length === 0 && <div className={styles.ldsDualRing}></div> }
-            {popular.map((item, index) => ( 
-            <div className={styles.containerPopular} key={index}> 
-                        <img onClick={() => roadInfo(item)} loading='lazy' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${item.poster_path}`} alt={item.title} />
-            </div> ))}
+            <div id={styles.containerMovies}>
+              {popular.map((item, index) => ( 
+              <div className={styles.containerPopular} key={index}> 
+                          <img onClick={() => roadInfo(item)} loading='lazy' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${item.poster_path}`} alt={item.title} />
+              </div> ))}
+            </div>
             <Pages setAtualPage={setAtualPage} page={page}></Pages>
         </main>
     )

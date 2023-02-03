@@ -58,9 +58,9 @@ function Home(){
 
     return(
         today.length === 0 ? 
-            <section id={styles.HomeSection}>
+            <main id={styles.HomeSection}>
                         <div className={styles.ldsDualRing}></div> 
-            </section>
+            </main>
             :
             <main id={styles.HomeSection}>
                 <section id={styles.HomeSearchFilm}>

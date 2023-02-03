@@ -56,10 +56,12 @@ function NowPlaying(){
         </main>
         :
         <main id={styles.NowPlaying}>
+          <div id={styles.ContainerNowPlaying}>
             {nowPlaying.map((item, index) => ( 
-              <div className={styles.containerNow} key={index}> 
-                    <img onClick={() => roadInfo(item)} loading='lazy' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${item.poster_path}`} alt={item.title} />
-              </div> ))}
+                <div className={styles.containerNow} key={index}> 
+                  <img onClick={() => roadInfo(item)} loading='lazy' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${item.poster_path}`} alt={item.title} />
+                </div> ))}
+          </div>
               <Pages setAtualPage={setAtualPage} page={page}></Pages>
         </main>
     )

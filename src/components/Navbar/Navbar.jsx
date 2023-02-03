@@ -16,7 +16,6 @@ function Navbar(){
 
     const handleToggle = () => {
         setIsOpen(!isOpen)
-        console.log(isOpen)
     }
 
 //NAVIGATE PARA NAVEGAÇÃO E HANDE SUBMIT VALIDA SE O INPUT ESTA VAZIO, MUDA O ESTADO DO MENU(ABERTO/FECHADO) E DIRECIONA

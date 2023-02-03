@@ -84,3 +84,15 @@
         padding: 30px;
     }
 }
+
+@media only screen and (min-width: 1600px){
+
+    #ContainerInfoFilm {
+        height: 70%;
+        background-color: #2b2b2b;
+        color: white;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}

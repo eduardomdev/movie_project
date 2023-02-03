@@ -47,10 +47,12 @@ function Upcoming(){
         </main>
       :
         <main id={styles.Upcoming}>
-            {upcoming.map((item, index) => ( 
-                <div className={styles.containerUpcoming} key={index}>
-                        <img onClick={() => roadInfo(item)} loading='lazy' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${item.poster_path}`} alt={item.title} />
-                </div> ))}
+          <div id={styles.containerUpcoming}>
+          {upcoming.map((item, index) => ( 
+            <div className={styles.containerUpcoming} key={index}>
+              <img onClick={() => roadInfo(item)} loading='lazy' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${item.poster_path}`} alt={item.title} />
+            </div> ))}
+          </div>
                 <Pages setAtualPage={setAtualPage} page={page} ></Pages>
         </main>
     )

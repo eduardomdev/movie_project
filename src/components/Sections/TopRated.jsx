@@ -48,12 +48,14 @@ function TopRated(){
         topRate.length === 0 ? 
         <main id={styles.TopRated}>
           <div className={styles.ldsDualRing}></div> 
-        </main>:
+        </main> :
         <main id={styles.TopRated}>
-            {topRate.map((item, index) => ( 
-            <div className={styles.containerTop} key={index}>
-                    <img onClick={() => roadInfo(item)} loading='lazy' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${item.poster_path}`} alt={item.title} />
-            </div> ))}
+            <div id={styles.ContainerTopRated}>
+                {topRate.map((item, index) => ( 
+                <div className={styles.containerTop} key={index}>
+                        <img onClick={() => roadInfo(item)} loading='lazy' src={`https://image.tmdb.org/t/p/w220_and_h330_face/${item.poster_path}`} alt={item.title} />
+                </div> ))}
+            </div>
             <Pages setAtualPage={setAtualPage} page={page}></Pages>
         </main>
     )
