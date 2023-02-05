@@ -5,7 +5,7 @@
 
 https://movie-project-omega-bice.vercel.app/
 
-E.Movie é uma aplicação full stack web e consiste em uma pesquisa de filmes, onde os dados são coletados na "The Movie Database API" e apresentados no app web, onde contem diversas opções de busca.
+E.Movie consiste em uma aplicação web para busca de filmes, onde os dados são coletados na "The Movie Database API" e apresentados no app web, onde contem diversas opções de busca.
 
 ## Layout web
 ![Web 1](https://github.com/eduardomdev/movie_project/blob/main/src/assets/emovie.png)
